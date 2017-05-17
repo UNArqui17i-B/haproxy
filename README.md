@@ -2,7 +2,7 @@
 
   [![Docker image][docker-image]][docker-url]
 
-User authentication microservice
+Load balancer using haproxy
 
 ## Test
 ```bash
