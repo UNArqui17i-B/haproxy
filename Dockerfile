@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install rsyslog -y && \
     sed -i 's/#$ModLoad imudp/$ModLoad imudp/g' /etc/rsyslog.conf && \
     sed -i 's/#$UDPServerRun 514/$UDPServerRun 514/g' /etc/rsyslog.conf
 
-ADD test.cfg /etc/rsyslog.d
+# Replace haproxy.cfg for test.cfg in testing
+COPY test.cfg /etc/rsyslog.d/haproxy.cfg
 COPY test.cfg /usr/local/etc/haproxy/haproxy.cfg
 
 EXPOSE 80 443 4000

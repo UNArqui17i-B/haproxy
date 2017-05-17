@@ -9,6 +9,6 @@ touch /var/log/haproxy.log
 # Throw the log to output
 tail -f /var/log/haproxy.log &
 
-echo "I'm running"
 # Start haproxy
+sleep 10
 exec haproxy -db -f /usr/local/etc/haproxy/haproxy.cfg
